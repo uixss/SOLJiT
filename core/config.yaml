@@ -1,0 +1,60 @@
+telegram:
+  bot_token: "  "
+  chat_id: ""
+  add_dex_button: true
+
+api_urls:
+  tokens: "https://api.dexscreener.com/token-profiles/latest/v1"
+  boosts: "https://api.dexscreener.com/token-boosts/latest/v1"
+  boosts_top: "https://api.dexscreener.com/token-boosts/top/v1"
+
+api_urls:
+  tokens: "https://api.dexscreener.com/token-profiles/latest/v1"
+  boosts: "https://api.dexscreener.com/token-boosts/latest/v1"
+  boosts_top: "https://api.dexscreener.com/token-boosts/top/v1"
+
+auto_buy:
+  enabled: true
+  allowed_events: ['pumped']
+  cooldown_sec: 0
+  per_token_cooldown_sec: 0
+  validate_mint_rpc: false
+
+filters:
+  monitored_events: ['pumped']
+  min_price_change_percentage_24h: 10.0
+  max_price_change_percentage_24h: -40.0
+
+alerts:
+  cooldown_sec: 60
+  min_price_rel_change: 0.05
+  min_vol_rel_change: 0.25
+  min_ch24_abs_change: 2.0
+
+rugcheck:
+  base_url: "https://api.rugcheck.xyz/v1"
+
+fake_volume_detection:
+  method: "algorithm"
+  algorithm:
+    min_volume_threshold: 1000
+    max_volume_change_percentage: 1000
+
+supply_check:
+  bundled_supply_field: "is_supply_bundled"
+
+coin_blacklist: []
+dev_blacklist: []
+
+logging:
+  level: "INFO"
+
+scalp:
+  min_liquidity_usd: 2000
+  min_tx5m: 10
+  min_vol5m_usd: 500
+  max_fdv_usd: 10000000
+  max_m5_spike_pct: 300
+  max_slippage_est: 0.2
+  ticket_usd: 150
+
